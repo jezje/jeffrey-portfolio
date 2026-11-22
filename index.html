@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Jeffrey - experienced Sales &amp; Marketing professional and BSIS student with a strong interest in Information Technology. Portfolio of experience, technical training, skills, projects, and certificates." />
   <meta name="theme-color" content="#0B0F0C" />
-  <title>Jeffrey | Sales &amp; Marketing Professional &amp; BSIS Student</title>
+  <title>Jeffrey Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=5" />
 </head>
 <body>
 
@@ -88,13 +88,6 @@
             <a href="#projects" class="btn btn-primary">View My Projects</a>
             <a href="#contact" class="btn btn-outline">Contact Me</a>
           </div>
-
-          <!-- EDIT: replace the # in each href with your real links -->
-          <ul class="socials" aria-label="Social media">
-            <li><a href="#" target="_blank" rel="noopener" aria-label="GitHub" class="social-link"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg></a></li>
-            <li><a href="#" target="_blank" rel="noopener" aria-label="Facebook" class="social-link"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
-            <li><a href="#" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
-          </ul>
         </div>
 
         <div class="hero-visual reveal">
@@ -222,7 +215,7 @@
               <li>Marketing</li>
               <li>Sales Operations</li>
               <li>Product Presentation</li>
-              <li>Professional Communication</li>
+              <li>Communication and Collaboration</li>
             </ul>
           </aside>
 
@@ -247,14 +240,14 @@
 
                   <h4>Responsibilities</h4>
                   <ul class="exp-list">
-                    <li>Sales & Marketing</li>
-                    <li>Technical Configuration</li>
+                    <li>Sales &amp; Marketing</li>
                     <li>Technical Support</li>
+                    <li>Device Configuration</li>
                   </ul>
 
                   <h4>Achievements</h4>
                   <ul class="exp-list">
-                    <li>Developed 10 years of professional experience in Sales & Marketing while gaining practical technical skills in CCTV and Internet Networking configuration, combining business knowledge with technical expertise.</li>
+                    <li>Developed 10 years of professional experience in Sales &amp; Marketing while gaining practical technical skills in CCTV and Internet Networking configuration, combining business knowledge with technical expertise.</li>
                   </ul>
                 </div>
               </article>
@@ -508,126 +501,43 @@
       </div>
     </section>
 
-        <!-- ============ CERTIFICATES ============ -->
+    <!-- ============ CERTIFICATES (card only; image opens in the viewer) ============ -->
     <section class="section alt" id="certificates">
-        <div class="container">
-
-            <div class="section-head reveal">
-                <p class="eyebrow">Documentation</p>
-                <h2>My Certificates & <span class="accent">Training</span></h2>
-                <p class="section-sub">
-                    A showcase of my technical training and professional development.
-                </p>
-            </div>
-
-            <!-- Single Certificate Card -->
-            <div class="cert-single-card reveal">
-
-                <div class="card cert-info">
-
-                    <p class="cert-count">01 / 01</p>
-
-                    <p class="project-cat">CCTV TRAINING</p>
-
-                    <h3>RSE REYEE CERTIFICATION TRAINING 2022</h3>
-
-                    <p class="cert-description">
-                        Completed technical training focused on CCTV surveillance
-                        technology, including system configuration, camera setup,
-                        and monitoring solutions.
-                    </p>
-
-                    <dl class="cert-facts">
-
-                        <div>
-                            <dt>Issued by</dt>
-                            <dd>PVGI / REYEE</dd>
-                        </div>
-
-                        <div>
-                            <dt>Date received</dt>
-                            <dd>April 19, 2022</dd>
-                        </div>
-
-                    </dl>
-
-                    <button
-                        type="button"
-                        class="btn btn-primary"
-                        id="certOpen">
-
-                        View Certificate
-
-                    </button>
-
-                </div>
-
-            </div>
-
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Documentation</p>
+          <h2>My Certificates &amp; <span class="accent">Training</span></h2>
+          <!-- <p class="section-sub">Select <strong>View Certificate</strong> to see it full size.</p> -->
         </div>
+
+        <div class="cert-showcase single reveal">
+          <!-- Details of the selected certificate (filled from the list below) -->
+          <div class="card cert-info" id="certInfo">
+            <p class="cert-count" id="certCount">1 / 1</p>
+            <p class="project-cat" id="certCat">Technical Training</p>
+            <h3 id="certTitle">RSE REYEE CERTIFICATION TRAINING 2022</h3>
+            <dl class="cert-facts">
+              <div><dt>Issued by</dt><dd id="certIssuer">PVGI / REYEE</dd></div>
+              <div><dt>Date received</dt><dd id="certDate">April 29, 2022</dd></div>
+            </dl>
+            <!-- <button type="button" class="btn btn-primary" id="certOpen">View Certificate</button> -->
+          </div>
+        </div>
+
+        <!--
+          CERTIFICATE LIST (hidden data): each button is one certificate.
+          Edit data-src (image file), category, title, issuer, and date.
+          The certificate image is only loaded when "View Certificate" is clicked.
+        -->
+        <div class="cert-tabs" id="certTabs" role="tablist" aria-label="Choose a certificate" hidden>
+          <button type="button" role="tab" class="cert-tab active" aria-selected="true"
+            data-src="certificates.jpg" data-category="Technical Training"
+            data-title="RSE REYEE CERTIFICATION TRAINING 2022" data-issuer="PVGI / REYEE" data-date="April 29, 2022">
+            <span class="cert-tab-label">Certificate</span>
+          </button>
+        </div>
+      </div>
     </section>
-
-
-    <!-- ============ CERTIFICATE VIEWER ============ -->
-
-    <div class="lightbox" id="lightbox" hidden>
-
-        <div class="lb-backdrop" id="lbBackdrop"></div>
-
-        <div class="lb-panel">
-
-            <!-- Header -->
-            <div class="lb-bar">
-
-                <span class="lb-count">CERTIFICATE PREVIEW</span>
-
-                <div class="lb-tools">
-
-                    <button
-                        type="button"
-                        class="lb-btn"
-                        id="lbClose"
-                        aria-label="Close certificate">
-
-                        &times;
-
-                    </button>
-
-                </div>
-
-            </div>
-
-            <!-- Certificate Image -->
-            <div class="lb-stage" id="lbStage">
-
-                <img
-                    id="lbImg"
-                    src="certificates.jpg"
-                    alt="RSE REYEE Certification Training Certificate">
-
-                <p id="lbMissing" class="lb-missing" hidden>
-                    Certificate image could not be loaded.
-                    Please check your image file.
-                </p>
-
-            </div>
-
-            <!-- Certificate Information -->
-            <div class="lb-caption">
-
-                <p class="lb-title">
-                    RSE REYEE CERTIFICATION TRAINING 2022
-                </p>
-
-                <p class="lb-meta">
-                    CCTV Training · PVGI / REYEE · April 19, 2022
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
 
     <!-- ============ CONTACT ============ -->
     <section class="section" id="contact">
@@ -641,14 +551,14 @@
         <div class="contact-grid">
           <div class="contact-info reveal">
             <ul class="contact-list">
-              <li><span class="icon"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg></span><div><strong>Email</strong><a href="mailto:your-email@example.com" id="contactEmail">[Insert Email]</a></div></li>
-              <li><span class="icon"><svg class="ico brand" aria-hidden="true"><use href="#i-github"/></svg></span><div><strong>GitHub</strong><a href="#" target="_blank" rel="noopener">[Insert GitHub URL]</a></div></li>
-              <li><span class="icon"><svg class="ico brand" aria-hidden="true"><use href="#i-linkedin"/></svg></span><div><strong>LinkedIn</strong><a href="#" target="_blank" rel="noopener">[Insert LinkedIn URL]</a></div></li>
-              <li><span class="icon"><svg class="ico brand" aria-hidden="true"><use href="#i-facebook"/></svg></span><div><strong>Facebook</strong><a href="#" target="_blank" rel="noopener">[Insert Facebook URL]</a></div></li>
+              <li><span class="icon"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg></span><div><strong>Email</strong><a href="mailto:jeffreynetworktechnician@gmail.com" id="contactEmail">jeffreynetworktechnician@gmail.com</a></div></li>
+              <!-- <li><span class="icon"><svg class="ico brand" aria-hidden="true"><use href="#i-github"/></svg></span><div><strong>GitHub</strong><a href="#" target="_blank" rel="noopener"></a></div></li> -->
+              <li><span class="icon"><svg class="ico brand" aria-hidden="true"><use href="#i-linkedin"/></svg></span><div><strong>LinkedIn</strong><a href="https://linkedin.com/in/jeffrey-a-69a4953a6" target="_blank" rel="noopener">linkedin.com/in/jeffrey-a-69a4953a6</a></div></li>
+              <!-- <li><span class="icon"><svg class="ico brand" aria-hidden="true"><use href="#i-facebook"/></svg></span><div><strong>Facebook</strong><a href="#" target="_blank" rel="noopener">[Insert Facebook URL]</a></div></li> -->
             </ul>
           </div>
 
-          <form class="card contact-form reveal" id="contactForm" novalidate>
+          <!--<form class="card contact-form reveal" id="contactForm" novalidate>
             <div class="field">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" autocomplete="name" required />
@@ -667,8 +577,8 @@
             </div>
             <button type="submit" class="btn btn-primary btn-block">Send Message</button>
             <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-            <p class="form-note">Note: this form has no backend yet. See the README for how to connect Formspree or EmailJS. Until then it opens your email app.</p>
-          </form>
+            <p class="form-note">Note: this form has no backend yet.</p>
+          </form> -->
         </div>
       </div>
     </section>
@@ -678,7 +588,7 @@
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="container footer-inner">
-      <p>*Designed & Developed by Jeffrey*  Created with the assistance of AI-powered development tools, with personal direction, customization, and implementation by Jeffrey. © 2026 Jeffrey. All Rights Reserved. &copy; <span id="year">2026</span></p>
+      <p>Designed &amp; Developed by Jeffrey - Created with the assistance of AI-powered development tools, with personal direction, customization, and implementation. &copy; <span id="year">2026</span> All Rights Reserved.</p>
       <ul class="socials small" aria-label="Social media">
         <li><a href="#" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg></a></li>
         <li><a href="#" target="_blank" rel="noopener" class="social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
@@ -700,7 +610,7 @@
       </div>
       <div class="lb-stage" id="lbStage">
         <img id="lbImg" alt="" />
-        <p class="lb-missing" id="lbMissing" hidden>This certificate image has not been added yet.<br />Add the file to <code>images/certificates/</code>.</p>
+        <p class="lb-missing" id="lbMissing" hidden>This certificate image was not found.<br />Add the file <code id="lbMissingFile">certificates.jpg</code></p>
       </div>
       <div class="lb-caption">
         <p class="lb-title" id="lbTitle"></p>
@@ -713,6 +623,6 @@
 
   <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=5"></script>
 </body>
 </html>
